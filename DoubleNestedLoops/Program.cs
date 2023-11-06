@@ -15,19 +15,17 @@ namespace DoubleNestedLoops
             Console.WriteLine("A loop within a loop");
             Console.WriteLine();
 
-            int numDigits = 16;
+            int width = 20;
+            int height = 150;
 
-            for(int i = 0; i <= numDigits -1; i++)
+            for(int x = 0; x <= width -1; x++)
             {
 
                 //InnerLoop()
-                for (int j = 0; j <= numDigits -1; j++)
+                for (int y = 0; y <= height -1; y++)
                 {
-                    for(int k = 0; k <= numDigits - 1; k++)
-                    {
-                        Console.WriteLine(i + " " + j + " " + k);
-                    }
-                    
+                    Console.SetCursorPosition(x, y);
+                    Console.WriteLine("*");
                 }
             }
 
