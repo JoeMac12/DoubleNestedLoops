@@ -15,11 +15,19 @@ namespace DoubleNestedLoops
             Console.WriteLine("A loop within a loop");
             Console.WriteLine();
 
-            for(int i = 0; i < 9; i++)
+            int numDigits = 16;
+
+            for(int i = 0; i <= numDigits -1; i++)
             {
-                for (int j = 0; j < 9; j++)
+
+                //InnerLoop()
+                for (int j = 0; j <= numDigits -1; j++)
                 {
-                    Console.WriteLine(i + " " + j);
+                    for(int k = 0; k <= numDigits - 1; k++)
+                    {
+                        Console.WriteLine(i + " " + j + " " + k);
+                    }
+                    
                 }
             }
 
@@ -31,5 +39,13 @@ namespace DoubleNestedLoops
 
 
         }
+
+        //static void InnerLoop(int i)
+        //{
+        //    for(int j = 0;j < 9;j++)
+        //    {
+        //        Console.WriteLine(j);
+        //    }
+        //}
     }
 }
